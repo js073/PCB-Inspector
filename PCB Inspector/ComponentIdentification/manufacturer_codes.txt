@@ -1,0 +1,136 @@
+Siltronics,L,LD
+Xicor,X
+VTC,VA,VC
+General Instrument,ACF,AY,GIC,GP,SPR
+Goldstar,GL,GM,GMM
+Telcom Semiconductor,TC,TCM
+Linear Technology Corporation,LT,LTC,LTZ
+Microsystems International,MIL
+Philips,HEF,MAB,N,NE,OM,PC,PCD,PCF,PLC,PLS,PZ,S,SA,SAA,SAB,SAF,SC,SCB,SCC,SCN,SE,SP,TAA,TBA,TCA,TDA,TEA,UA,UMA
+Exar,XR
+Cyrix,CX
+Gazelle,GA
+Waferscale Integration inc.,PSD
+TRW,TDC
+Micrel,MIC
+Comlinear,CLC
+Cypress,CY,PALCE
+Optical Electronics Inc.,AH
+Syntaq,SYD,SYS
+Mitel Semiconductor,MT
+Dallas Semiconductor,DS
+Amperex,OM,PCD,PCF,SAA,SAB,SAF,SCB,SCN,TAA,TBA,TCA,TEA
+Supertex,CM
+Analog Devices,AD,ADEL,ADG,ADLH,ADM,ADVFC,AMP,BUF,CAV,CMP,DAC,HAS,HDM,MUX,OP,PM,REF,SSM,SW
+National Semiconductor,A,ADC,CLC,COP,DAC,DM,DP,DS,F,L,LF,LFT,LH,LM,LMC,LMD,LMF,LMX,LPC,LPC,MF,MM,NH,UNX
+Telefunken,OM,PCD,PCF,SAA,SAB,SAF,SCB,SCN,TAA,TBA,TCA,TEA
+Teledyne Philbrick,TP
+Rockwell,R
+Taytheon,TMC
+Zetex,ZH,ZLDO,ZM,ZMR,ZR,ZRA,ZRB,ZREF,ZRT,ZSD,ZSM
+ON Semiconductor,EF,ET,GSD,HCF,L,LM,LS,M,MC,MK,OM,PCD,PCF,SAA,SAB,SAF,SCB,SCN,SFC,SG,ST,TAA,TBA,TCA,TD,TDA,TDF,TEA,TL,TS,TSH,UC,ULN
+Standard Microsystem Corp.,COM,KR
+Holtek,HT
+ON Semiconductor,MC
+EG&G Reticon,RD,RF,RM,RT,RU
+California Micro Devices Corp.,G
+Intel,C,D,i,I,N,P,PA
+TESLA,MA,MAA,MBA,MH,MHB
+Elantec,EL
+GE,GEL
+NEC,PB,PC,PD,UPD,UPD8
+Performance Semiconductor,P
+Siemens,OM,PCD,PCF,SAA,SAB,SABE,SAF,SCB,SCN,TAA,TBA,TCA,TEA
+Zentrum Microelectronics,TSH,UD
+US Microchip,ULN
+Seagate,IP
+Monolithics,CMP,MAT,OP,SSS
+Ferranti,FSS,ZLD,ZN
+Lattice,GAL,ISPLSI
+Seeq,NQ,PQ
+Cherry Semiconductor,CS
+Datel,AM
+Telmos,TML
+Raytheon,R,Ray,RC,RM
+Microchip,PIC
+Toshiba,T,TA,TC,TD,THM,TMM,TMP,TMPZ
+GEC-Plessey Semiconductor,MVA,ZN
+Unitrode,L,UC,UCC
+United Microelectronics Corp.,UM
+New Japanese Radio Corp.,NJM
+Vantis,MACH,PALCE
+Sony,BX,CX,CXK
+Micro Power,MP
+Startech,ST
+Honeywell,HAD,HDAC,SS
+ESMF,SFC
+Paradigm,PDM
+MOS Technology,MCS
+Oki,MSC,MSM
+Benchmarq Microelectronics Inc.,BQ
+Siliconix,D,DF,L,LD
+Micra Hybrids,MC
+Altera,EP,EPM,PL
+Marconi,MA
+Burr-Brown,ADS,ALD,BUF,DAC,DCP,INA,IS,ISO,IVC,MPC,MPY,OPA,OPT,PCM,PGA,PWR,RCV,REF,REG,SHC,UAF,VCA,VFC,XTR
+Advanced Micro Devices,AM
+LSI Computer Systems,LS
+Apex,PA
+VLSI Technology Inc.,VT
+Quality Semiconductor Inc.,QS
+Texas Instruments,MC,NE,OP,RC,SG,SN,TIBPAL,TIL,TIP,TIPAL,TIS,TL,TLC,TLE,TM,TMS,UA,ULN
+Nitron,NC
+Maxim,MAX,MX,SI
+Optek,OHN
+Microcomputers Systems Components,MSC
+M. S. Kennedy,MSK
+Integrated Silicon Solutions Inc.,IS
+Hyundai,HY
+AMD,A,Am,AMPAL,PAL
+Mitsubishi,M,MSL8
+Macronix,MX
+Silicon Storage Technology,PH
+Sprague,TPQ,UCS
+ON Semiconductor,AVS
+IC Works,W
+Samsung,KA,KM,KMM,KMF
+Allegro Microsystems,A,STR,UCN,UDN,UDS,UGN
+Sharp,IR
+Integrated Device Technology,IDT
+Fairchild,A,DM,F,L,MM,NM,NMC,UNX
+Zilog,Z
+Motorola,HEP,LF,MC,MCC,MCCS,MCM,MCT,MEC,MIL,MM,MPF,MPQ,MPS,MPSA,MWM,SG,SN,TDA,TL,UA,UAA,UC,ULN,XC
+Micro Linear Corp.,ML
+International Rectifier,IR
+Panasonic,AN
+Atmel,AT,ATV
+Fujitsu,MB,MBL8,MBM
+ITT,ITT
+Harris,AD,CA,CD,CDP,CP,CS,DG,H,HA,HFA,HI,HIN,HIP,HV,ICH,ICL,ICM,IM
+Hewlett-Packard,HCPL,HCTL,HPM
+Nippon Precision Circuits,SM
+Amtel,V
+Western Digital,WD
+Hitachi,HA,HD,HG,HL,HM,HN
+Inmos,IMS
+Mostek,MK
+Temic,CM,DG,HM,IP,MC,P,S,SD,SI,U
+Lucent Technologies,ATT
+Analog Systems,MA
+Seiko,RTC
+I.P.R.S. Baneasa,β
+Teledyne Semiconductor,TSC
+Newport,NSC
+Silicon General,SG
+Sanyo,LA,LC
+Information Chips and Technology Inc.,PEEL
+Epson,RTC
+Precision Monolithic,BUF
+Plessy,MN,SL,SP,TAB
+Ericsson,PBL
+Advanced Monolithic Systems,AMSREF
+AEG,OM,PCD,PCF,SAA,SAB,SAF,SCB,SCN,TAA,TBA,TCA,TEA
+Micro Networks,MN
+Information Strorage Devices,ISD
+Brooktree,BT
+MediaTek,MT

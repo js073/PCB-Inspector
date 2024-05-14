@@ -1,0 +1,256 @@
+3dfx Interactive
+Achronix
+Actions Semiconductor
+Adapteva
+Agere Systems
+Agilent Technologies
+Airgo Networks
+Alcatel
+Alchip
+Altera
+Allegro Microsystems
+Allwinner Technology
+Alphamosaic
+AMD
+Analog Devices
+Apple Inc.
+Applied Materials
+Applied Micro Circuits Corporation
+ARM
+Asahi Kasei Microdevices
+AT&T
+Atari
+Atheros
+ATI Technologies
+Atmel
+Amkor Technology
+ams AG
+Bourns, Inc.
+Brite Semiconductor
+Broadcom Corporation
+BroadLight
+Burr-Brown Corporation
+C-Cube Microsystems
+Calxeda
+Cavium
+CEITEC
+Chips and Technologies
+CISC Semiconductor
+Cirrus Logic
+Corsair
+Club 3D
+Commodore Semiconductor Group
+Conexant
+Crocus Technology
+CSR plc
+Cypress Semiconductor
+D-Wave Systems
+Dallas Semiconductor
+Dynex Semiconductor
+Elmos Semiconductor
+EM Microelectronic-Marin
+Entropic Communications
+Epistar
+Epson
+ESS Technology
+Everspin Technologies
+Exar Corporation
+MaxLinear in 2017)
+EZchip Semiconductor
+Fagor
+Fairchild Semiconductor
+Ferranti
+Freescale Semiconductor
+FTDI
+Fujifilm
+Fujitsu
+G.Skill
+General Instrument
+Genesis Microchip
+GlobalFoundries
+GM Components Holdings
+GMT Microelectronics
+GreenPeak Technologies
+Harris Semiconductor
+HannStar Display Corporation
+HiSilicon
+Hitachi Ltd
+Holtek
+IBM
+IM Flash Technologies
+Imagination Technologies
+Infineon Technologies
+InfoTM
+Ingenic Semiconductor
+Inmos
+Inprocomm
+Integra Technologies
+International Rectifier
+Integrated Device Technology
+Intel
+Intersil
+Intrinsity
+InvenSense
+Industrial Technology Research Institute
+IXYS Corporation
+Jazz Semiconductor
+Jennic Limited
+Kawasaki
+Kyocera
+Kingston Technology
+Lattice Semiconductor
+Leadcore Technology
+Linear Technology Corporation
+Littelfuse
+Lantiq
+LSI Logic
+M-Labs
+M-Systems
+Macronix
+Magnum Semiconductor
+MaxLinear
+Marvell Technology Group
+MediaTek
+Mellanox Technologies
+Mentor Graphics
+Microchip Technology
+Micron Technology
+Microsemi
+MicroSystems International
+Mindspeed Technologies
+MIPS Technologies
+Mitsubishi Electric
+MOS Technology
+Mosel Vitelic Corporation
+Mosel Vitelic Inc
+Mostek
+Motorola
+National Semiconductor
+2011 by Texas Instruments)
+NEC
+NetLogic Microsystems
+Nexperia
+Nichia
+Nintendo
+Nordic Semiconductor
+Novellus Systems
+Nvidia
+NXP Semiconductors
+Number Nine Visual Technology
+Nuvoton
+OSRAM
+Oak Technology
+ON Semiconductor
+Open-Silicon
+Phison
+Parallax Inc.
+Philips Semiconductors
+Plessey
+PLX Technology
+PMC-Sierra
+latter co-founded by ex-NatSemi employee)
+Panasonic
+PortalPlayer
+Powerchip Semiconductor
+Precision Monolithics
+Qualcomm
+Qimonda
+Qorvo
+Rabbit Semiconductor
+Ralink
+Rambus
+RCA
+Realtek
+Renesas Technology
+Reticon
+RF Micro Devices
+Ricoh
+Rise Technology
+Robert Bosch
+Rockchip
+Rockwell Semiconductor
+Rohm
+Roland Corporation
+RMI Corporation
+Samsung Electronics
+Sanyo
+Sanken Electric
+SanDisk
+Seagate Technology
+Sensonor
+Sharp Corporation
+SiFive
+Signetics
+Sigma Designs
+SigmaTel
+Silicon Motion
+Silicon Systems
+Silicon Labs
+Silicon Image
+Silicon Integrated Systems
+SK Hynix
+Skyworks Solutions
+Sony
+SMIC
+Spansion
+Spreadtrum
+STMicroelectronics
+ST-Ericsson
+Sun Microsystems
+Symbios Logic
+Synertek
+Tamarack Microelectronics
+TDK
+Telechips
+Tektronix
+Teridian Semiconductor
+Texas Instruments
+Tilera
+Toshiba
+Tower Semiconductor
+Transmeta
+TriQuint Semiconductor
+Truly International Holdings
+Trumpf
+TSMC
+UMC
+u-blox
+Ubicom
+UNISOC
+Vanguard International Semiconductor Corporation
+VIA Technologies
+Vimicro
+Virata Corporation
+Vishay Intertechnology
+Vivante Corporation
+Volterra Semiconductor
+Wacom
+Western Digital
+Wilocity
+Winbond
+Wolfson Microelectronics
+WonderMedia
+X-Fab
+Xelerated
+Xilinx
+XMOS
+Yamaha Corporation
+ZiLOG
+Zoran Corporation
+Siltronics
+Xicor
+VTC
+Goldstar
+Telcom Semiconductor
+Cyrix
+Gazelle
+Waterscale Integration Inc
+TRW
+Micrel
+Comlinear
+Optical Electronics Inc
+Syntaq
+Mitel Semiconductor
+Amperex
+Superex
+Telefunken
