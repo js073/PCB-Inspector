@@ -28,14 +28,14 @@ struct HomeViewMulti: View {
                     InputSelectionView(viewStyle: .multiView)
                 }
                 .overlay(alignment: .top) {
-                    if devMode {
-                        NavigationLink {
-                            TestViewSelector()
-                        } label: {
-                            Text("Test Views")
-                        }
-                        .buttonStyle(AccentButtonStyle(colour: .red))
-                    }
+//                    if devMode {
+//                        NavigationLink {
+//                            TestViewSelector()
+//                        } label: {
+//                            Text("Test Views")
+//                        }
+//                        .buttonStyle(AccentButtonStyle(colour: .red))
+//                    }
                 }
             }
             .task {

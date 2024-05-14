@@ -54,6 +54,7 @@
 		A0CA1F382B27698800837D87 /* LibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CA1F372B27698800837D87 /* LibraryController.swift */; };
 		A0E35B7F2BB1DC10009BD5E6 /* small_items_obb.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = A0E35B7E2BB1DC10009BD5E6 /* small_items_obb.mlpackage */; };
 		A0E667882B0FC8BE00192049 /* SingleElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E667872B0FC8BE00192049 /* SingleElementView.swift */; };
+		A0E792BD2BF3AD9900B20B3B /* PCB-Inspector-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0E792BC2BF3AD9900B20B3B /* PCB-Inspector-Info.plist */; };
 		A0F257482B2724EB0039DE32 /* ImageUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F257472B2724EB0039DE32 /* ImageUtilities.swift */; };
 		A0F2574A2B2725870039DE32 /* TextExtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F257492B2725870039DE32 /* TextExtraction.swift */; };
 		A0F40D342B0CCF900004D5C9 /* PCB_InspectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F40D332B0CCF900004D5C9 /* PCB_InspectorApp.swift */; };
@@ -69,23 +70,6 @@
 		A0FC4A1D2B0E6D7B00296EC1 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FC4A1C2B0E6D7B00296EC1 /* CameraView.swift */; };
 		A0FD77CA2B98C94200DB649B /* PDFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FD77C92B98C94200DB649B /* PDFView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A0F40D432B0CCF910004D5C9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A0F40D282B0CCF900004D5C9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A0F40D2F2B0CCF900004D5C9;
-			remoteInfo = "PCB Inspector";
-		};
-		A0F40D4D2B0CCF920004D5C9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A0F40D282B0CCF900004D5C9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A0F40D2F2B0CCF900004D5C9;
-			remoteInfo = "PCB Inspector";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A003AEAF2B83AEB600D7A6B2 /* LiveViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewView.swift; sourceTree = "<group>"; };
@@ -133,6 +117,7 @@
 		A0CA1F372B27698800837D87 /* LibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryController.swift; sourceTree = "<group>"; };
 		A0E35B7E2BB1DC10009BD5E6 /* small_items_obb.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = small_items_obb.mlpackage; sourceTree = "<group>"; };
 		A0E667872B0FC8BE00192049 /* SingleElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleElementView.swift; sourceTree = "<group>"; };
+		A0E792BC2BF3AD9900B20B3B /* PCB-Inspector-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PCB-Inspector-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A0F257472B2724EB0039DE32 /* ImageUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtilities.swift; sourceTree = "<group>"; };
 		A0F257492B2725870039DE32 /* TextExtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtraction.swift; sourceTree = "<group>"; };
 		A0F40D302B0CCF900004D5C9 /* PCB Inspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PCB Inspector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,8 +125,6 @@
 		A0F40D352B0CCF900004D5C9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A0F40D392B0CCF910004D5C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0F40D3C2B0CCF910004D5C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A0F40D422B0CCF910004D5C9 /* PCB InspectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PCB InspectorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0F40D4C2B0CCF920004D5C9 /* PCB InspectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PCB InspectorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0FA2CD92B7FC14900407CF3 /* HomeViewMulti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewMulti.swift; sourceTree = "<group>"; };
 		A0FA2CDB2B7FC65100407CF3 /* CompactNavigationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactNavigationCard.swift; sourceTree = "<group>"; };
 		A0FA2CDD2B7FCCF000407CF3 /* SimpleNavigationBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNavigationBox.swift; sourceTree = "<group>"; };
@@ -160,20 +143,6 @@
 				A00FF3DE2B5E973100177A29 /* SwiftImage in Frameworks */,
 				A0214FBD2B56E9BE003E4F28 /* Alamofire in Frameworks */,
 				A0C127442B72B465003B6B7C /* OrderedCollections in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0F40D3F2B0CCF910004D5C9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0F40D492B0CCF920004D5C9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				A0F40D322B0CCF900004D5C9 /* PCB Inspector */,
+				A0E792BC2BF3AD9900B20B3B /* PCB-Inspector-Info.plist */,
 				A0F40D312B0CCF900004D5C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -309,8 +279,6 @@
 			isa = PBXGroup;
 			children = (
 				A0F40D302B0CCF900004D5C9 /* PCB Inspector.app */,
-				A0F40D422B0CCF910004D5C9 /* PCB InspectorTests.xctest */,
-				A0F40D4C2B0CCF920004D5C9 /* PCB InspectorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -369,42 +337,6 @@
 			productReference = A0F40D302B0CCF900004D5C9 /* PCB Inspector.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A0F40D412B0CCF910004D5C9 /* PCB InspectorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A0F40D592B0CCF920004D5C9 /* Build configuration list for PBXNativeTarget "PCB InspectorTests" */;
-			buildPhases = (
-				A0F40D3E2B0CCF910004D5C9 /* Sources */,
-				A0F40D3F2B0CCF910004D5C9 /* Frameworks */,
-				A0F40D402B0CCF910004D5C9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A0F40D442B0CCF910004D5C9 /* PBXTargetDependency */,
-			);
-			name = "PCB InspectorTests";
-			productName = "PCB InspectorTests";
-			productReference = A0F40D422B0CCF910004D5C9 /* PCB InspectorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		A0F40D4B2B0CCF920004D5C9 /* PCB InspectorUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A0F40D5C2B0CCF920004D5C9 /* Build configuration list for PBXNativeTarget "PCB InspectorUITests" */;
-			buildPhases = (
-				A0F40D482B0CCF920004D5C9 /* Sources */,
-				A0F40D492B0CCF920004D5C9 /* Frameworks */,
-				A0F40D4A2B0CCF920004D5C9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A0F40D4E2B0CCF920004D5C9 /* PBXTargetDependency */,
-			);
-			name = "PCB InspectorUITests";
-			productName = "PCB InspectorUITests";
-			productReference = A0F40D4C2B0CCF920004D5C9 /* PCB InspectorUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -417,14 +349,6 @@
 				TargetAttributes = {
 					A0F40D2F2B0CCF900004D5C9 = {
 						CreatedOnToolsVersion = 15.0.1;
-					};
-					A0F40D412B0CCF910004D5C9 = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = A0F40D2F2B0CCF900004D5C9;
-					};
-					A0F40D4B2B0CCF920004D5C9 = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = A0F40D2F2B0CCF900004D5C9;
 					};
 				};
 			};
@@ -447,8 +371,6 @@
 			projectRoot = "";
 			targets = (
 				A0F40D2F2B0CCF900004D5C9 /* PCB Inspector */,
-				A0F40D412B0CCF910004D5C9 /* PCB InspectorTests */,
-				A0F40D4B2B0CCF920004D5C9 /* PCB InspectorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -458,24 +380,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0E792BD2BF3AD9900B20B3B /* PCB-Inspector-Info.plist in Resources */,
 				A0F40D3D2B0CCF910004D5C9 /* Preview Assets.xcassets in Resources */,
 				A0F40D3A2B0CCF910004D5C9 /* Assets.xcassets in Resources */,
 				A08787BB2B5058A500F6F11A /* manufacturer_list.txt in Resources */,
 				A08787BD2B51918E00F6F11A /* manufacturer_codes.txt in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0F40D402B0CCF910004D5C9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0F40D4A2B0CCF920004D5C9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,34 +452,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0F40D3E2B0CCF910004D5C9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0F40D482B0CCF920004D5C9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A0F40D442B0CCF910004D5C9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A0F40D2F2B0CCF900004D5C9 /* PCB Inspector */;
-			targetProxy = A0F40D432B0CCF910004D5C9 /* PBXContainerItemProxy */;
-		};
-		A0F40D4E2B0CCF920004D5C9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A0F40D2F2B0CCF900004D5C9 /* PCB Inspector */;
-			targetProxy = A0F40D4D2B0CCF920004D5C9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A0F40D542B0CCF920004D5C9 /* Debug */ = {
@@ -764,80 +646,6 @@
 			};
 			name = Release;
 		};
-		A0F40D5A2B0CCF920004D5C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5U62LGM35H;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Smith.PCB-InspectorTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PCB Inspector.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PCB Inspector";
-			};
-			name = Debug;
-		};
-		A0F40D5B2B0CCF920004D5C9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Smith.PCB-InspectorTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PCB Inspector.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PCB Inspector";
-			};
-			name = Release;
-		};
-		A0F40D5D2B0CCF920004D5C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5U62LGM35H;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Smith.PCB-InspectorUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "PCB Inspector";
-			};
-			name = Debug;
-		};
-		A0F40D5E2B0CCF920004D5C9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Jack-Smith.PCB-InspectorUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "PCB Inspector";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -855,24 +663,6 @@
 			buildConfigurations = (
 				A0F40D572B0CCF920004D5C9 /* Debug */,
 				A0F40D582B0CCF920004D5C9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A0F40D592B0CCF920004D5C9 /* Build configuration list for PBXNativeTarget "PCB InspectorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A0F40D5A2B0CCF920004D5C9 /* Debug */,
-				A0F40D5B2B0CCF920004D5C9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A0F40D5C2B0CCF920004D5C9 /* Build configuration list for PBXNativeTarget "PCB InspectorUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A0F40D5D2B0CCF920004D5C9 /* Debug */,
-				A0F40D5E2B0CCF920004D5C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

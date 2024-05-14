@@ -15,15 +15,47 @@ struct SettingsView: View {
     @State fileprivate var originalColourScheme: ColourScheme = .defaultScheme
     @State fileprivate var isConfirmingErase: Bool = false
     
+    @State fileprivate var showingOctopartSheet: Bool = false
+    @State fileprivate var octopartClientID: String = ""
+    @State fileprivate var octopartClientSecret: String = ""
+    
+    @State fileprivate var showingGoogleSheet: Bool = false
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 Form {
-//                    Picker("Colour Scheme", selection: $colourSchemeSelection) {
-//                        Text("Default").tag(ColourScheme.defaultScheme)
-//                        Text("Light").tag(ColourScheme.lightScheme)
-//                        Text("Dark").tag(ColourScheme.darkScheme)
-//                    }
+                    // Section for options for Octopart API
+                    Section {
+                        Button {
+                            showingOctopartSheet.toggle()
+                        } label: {
+                            LabeledContent("Octopart API Details", content: { Image(systemName: "chevron.right") })
+                        }
+                        .foregroundStyle(.iconColour)
+                        .sheet(isPresented: $showingOctopartSheet, content: {
+                            OctopartAPIScreen(closingAction: { showingOctopartSheet.toggle() })
+                        })
+                    } header: {
+                        Text("Octopart API Options")
+                    }
+                    
+                    // Section for options for Google search api 
+                    Section {
+                        Button {
+                            showingGoogleSheet.toggle()
+                        } label: {
+                            LabeledContent("Google API Details", content: { Image(systemName: "chevron.right") })
+                        }
+                        .foregroundStyle(.iconColour)
+                        .sheet(isPresented: $showingGoogleSheet, content: {
+                            GoogleAPIScreen(closingAction: { showingGoogleSheet.toggle() })
+                        })
+                    } header: {
+                        Text("Google Search API Options")
+                    }
+                    
+                    
                     Section {
                         Toggle("Developer Mode", isOn: $developerModeToggle)
                         Button {
@@ -42,7 +74,7 @@ struct SettingsView: View {
                     } header: {
                         Text("Developer Options")
                     } footer: {
-                        Text("Developer Mode - Allows access to a testing view as well as disable all calls to the API. For testing purposes only. \n Reset App - Will erase all stored model and reset settings")
+                        Text("Developer Mode - Disables all calls to the API. For testing purposes only. \n Reset App - Will erase all stored model and reset settings")
                     }
                 }
                 .overlay(alignment: .bottom) { // Save and cancel buttons
@@ -99,6 +131,108 @@ struct SettingsView: View {
         saveSettings(developerModeToggle, colourSchemeSelection.rawValue)
     }
 }
+
+// Used for editing values for Octopart API keys
+fileprivate struct OctopartAPIScreen: View {
+    @State fileprivate var userID: String = ""
+    @State fileprivate var userSecret: String = ""
+    var closingAction: () -> ()
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Button {
+                    closingAction()
+                } label: {
+                    Text("Exit")
+                }
+                .buttonStyle(SmallMonoButtonStyle())
+                Spacer()
+                Button { // Save the set values
+                    UserDefaults.standard.setValue(userID, forKey: "octopart-user-id")
+                    UserDefaults.standard.setValue(userSecret, forKey: "octopart-user-secret")
+                    closingAction()
+                } label: {
+                    Text("Save")
+                }
+                .buttonStyle(SmallAccentButtonStyle())
+            }
+            .padding(.all, 20)
+
+            Form { // Text entry section
+                Section { // Form for Octopart client id
+                    TextField("User ID", text: $userID)
+                        .autocorrectionDisabled()
+                } header: {
+                    Text("Octopart User ID")
+                }
+                
+                Section { // Form input for Octopart client secret
+                    TextField("User Secret", text: $userSecret)
+                        .autocorrectionDisabled()
+                } header: {
+                    Text("Octopart User Secret")
+                }
+            }
+        }
+        .background(.backgroundColourVariant)
+        .task { // Update the values on Shett opening
+            userID = UserDefaults.standard.string(forKey: "octopart-user-id") ?? ""
+            userSecret = UserDefaults.standard.string(forKey: "octopart-user-secret") ?? ""
+        }
+    }
+}
+
+// Used for editing Google API keys
+fileprivate struct GoogleAPIScreen: View {
+    @State fileprivate var userID: String = ""
+    @State fileprivate var userSecret: String = ""
+    var closingAction: () -> ()
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Button {
+                    closingAction()
+                } label: {
+                    Text("Exit")
+                }
+                .buttonStyle(SmallMonoButtonStyle())
+                Spacer()
+                Button { // Save the set values
+                    UserDefaults.standard.setValue(userID, forKey: "google-api-key")
+                    UserDefaults.standard.setValue(userSecret, forKey: "google-engine-id")
+                    closingAction()
+                } label: {
+                    Text("Save")
+                }
+                .buttonStyle(SmallAccentButtonStyle())
+            }
+            .padding(.all, 20)
+            Form { // Text entry section
+                Section { // Form for Google api key
+                    TextField("API Key", text: $userID)
+                        .autocorrectionDisabled()
+                } header: {
+                    Text("Google Custom Search API Key")
+                }
+                
+                Section { // Form input for Google engine ID
+                    TextField("Engine ID", text: $userSecret)
+                        .autocorrectionDisabled()
+                } header: {
+                    Text("Google Custom Search Engine ID")
+                }
+            }
+        }
+        .background(.backgroundColourVariant)
+        .task { // Update the values on Shett opening
+            userID = UserDefaults.standard.string(forKey: "google-api-key") ?? ""
+            userSecret = UserDefaults.standard.string(forKey: "google-engine-id") ?? ""
+        }
+    }
+}
+
 
 /// Enum used to denote the current colour scheme options
 fileprivate enum ColourScheme: String, Identifiable, CaseIterable {

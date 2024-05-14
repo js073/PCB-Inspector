@@ -15,8 +15,8 @@ class APIRequest {
     private let storedTokenKey = "octopart_api_token" // Key for stored token
     private let storedTokenTimeKey = "octopart_api_token_creation_date" // Key for time of creation of stored token
     //TODO: Fix the API strings
-    private let octopartClientID = "" // ID for token retrieval
-    private let octopartClientSecret = "" // Secret for token retrieval
+    private let octopartClientID = UserDefaults.standard.string(forKey: "octopart-user-id") ?? "" // ID for token retrieval
+    private let octopartClientSecret = UserDefaults.standard.string(forKey: "octopart-user-secret") ?? "" // Secret for token retrieval
     private let octopartTokenURL = "https://identity.nexar.com/connect/token" // URL for retrieving a valid token for the API request
     private let octopartSearchURL = "https://api.nexar.com/graphql/" // URL for searching for parts
     private var octopartAPIToken: String? // Current API token

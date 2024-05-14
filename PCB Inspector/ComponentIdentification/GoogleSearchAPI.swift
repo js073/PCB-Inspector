@@ -12,8 +12,8 @@ import Alamofire
 class GoogleSearchAPI {
     static var shared: GoogleSearchAPI = GoogleSearchAPI() // Singleton class
     //TODO: Re-add Google Search API key and Search Engine ID sections, with error checking
-    let apiKey: String = ""
-    let searchEngineID: String = ""
+    let apiKey: String = UserDefaults.standard.string(forKey: "google-api-key") ?? ""
+    let searchEngineID: String = UserDefaults.standard.string(forKey: "google-engine-id") ?? ""
     lazy var searchURL = { (query: String) in
         return "https://www.googleapis.com/customsearch/v1?key=\(self.apiKey)&cx=\(self.searchEngineID)&q=\(query)"
     }
