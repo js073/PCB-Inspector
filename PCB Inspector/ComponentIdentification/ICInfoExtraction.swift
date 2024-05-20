@@ -24,6 +24,7 @@ class ICInfoExtraction {
         return lower.union(upper).union(nums)
     }
     var testingMode: (Bool, APIErrorState, ICInfoState) = (false, .none, .unloaded) // Variable used in testing to prevent the API from being called in order to prevent unecessary usage charges
+    private lazy var usingAPI = UserDefaults.standard.bool(forKey: "searchModeToggle") // Used to check if the API is being used 
     
     /// Opens the file containing the manufacturer list and returns it as an array of Strings, if the file cannot be found or is empty, then an empty list is returned
     fileprivate func getManufacturerList() -> [String] {
@@ -372,6 +373,11 @@ class ICInfoExtraction {
     fileprivate func apiLookup(_ id: String) async -> InfoExtractionReturn {
         if testingMode.0 { // Used for testing to get the desired result from the API and prevent API calls
             return InfoExtractionReturn(dictionary: [:], icState: testingMode.2)
+        }
+        
+        // If the API mode toggle has been turned off, then return no information
+        if !usingAPI {
+            return InfoExtractionReturn(dictionary: [:], icState: .notAvaliable)
         }
         
         let returnState = await APIRequest.shared.octopartAPISearch(id)

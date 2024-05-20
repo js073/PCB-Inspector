@@ -11,6 +11,8 @@ import SwiftUI
 struct SettingsView: View {
     @State fileprivate var developerModeToggle: Bool = false
     @State fileprivate var originalDeveloperMode: Bool = false
+    @State fileprivate var searchModeToggle: Bool = false
+    @State fileprivate var originalSearchMode: Bool = false
     @State fileprivate var colourSchemeSelection: ColourScheme = .defaultScheme
     @State fileprivate var originalColourScheme: ColourScheme = .defaultScheme
     @State fileprivate var isConfirmingErase: Bool = false
@@ -25,39 +27,45 @@ struct SettingsView: View {
         GeometryReader { geometry in
             VStack {
                 Form {
-                    // Section for options for Octopart API
+                    // API option section
                     Section {
-                        Button {
-                            showingOctopartSheet.toggle()
-                        } label: {
-                            LabeledContent("Octopart API Details", content: { Image(systemName: "chevron.right") })
+                        Toggle("Use API", isOn: $searchModeToggle)
+                        
+                        // API credential options
+                        Group {
+                            // Octopart API options
+                            Button {
+                                showingOctopartSheet.toggle()
+                            } label: {
+                                LabeledContent("Octopart API Credentials", content: { Image(systemName: "chevron.right") })
+                            }
+                            .foregroundStyle(.iconColour)
+                            .sheet(isPresented: $showingOctopartSheet, content: {
+                                OctopartAPIScreen(closingAction: { showingOctopartSheet.toggle() })
+                            })
+                            
+                            // Google API options
+                            Button {
+                                showingGoogleSheet.toggle()
+                            } label: {
+                                LabeledContent("Google API Credentials", content: { Image(systemName: "chevron.right") })
+                            }
+                            .foregroundStyle(.iconColour)
+                            .sheet(isPresented: $showingGoogleSheet, content: {
+                                GoogleAPIScreen(closingAction: { showingGoogleSheet.toggle() })
+                            })
                         }
-                        .foregroundStyle(.iconColour)
-                        .sheet(isPresented: $showingOctopartSheet, content: {
-                            OctopartAPIScreen(closingAction: { showingOctopartSheet.toggle() })
-                        })
+                        .disabled(!searchModeToggle)
+                        .opacity(!searchModeToggle ? 0.5 : 1)
                     } header: {
-                        Text("Octopart API Options")
+                        Text("API Options")
+                    } footer: {
+                        Text("Use API - Determines if the application will use the API to get information.\nCredential Sections - For entry of credentials for the specific APIs. ")
                     }
                     
-                    // Section for options for Google search api 
-                    Section {
-                        Button {
-                            showingGoogleSheet.toggle()
-                        } label: {
-                            LabeledContent("Google API Details", content: { Image(systemName: "chevron.right") })
-                        }
-                        .foregroundStyle(.iconColour)
-                        .sheet(isPresented: $showingGoogleSheet, content: {
-                            GoogleAPIScreen(closingAction: { showingGoogleSheet.toggle() })
-                        })
-                    } header: {
-                        Text("Google Search API Options")
-                    }
-                    
                     
                     Section {
-                        Toggle("Developer Mode", isOn: $developerModeToggle)
+//                        Toggle("Developer Mode", isOn: $developerModeToggle)
                         Button {
                             isConfirmingErase = true
                         } label: {
@@ -66,15 +74,15 @@ struct SettingsView: View {
                         .confirmationDialog("Are you sure you want to delete all information?", isPresented: $isConfirmingErase, titleVisibility: .visible) {
                             Button(role: .destructive) {
                                 DataHandler.handlerShared.deleteAll()
-                                saveSettings(false, ColourScheme.defaultScheme.rawValue)
+                                saveSettings(false, ColourScheme.defaultScheme.rawValue, true)
                             } label: {
                                 Text("Delete")
                             }
                         }
                     } header: {
-                        Text("Developer Options")
+                        Text("App Reset")
                     } footer: {
-                        Text("Developer Mode - Disables all calls to the API. For testing purposes only. \n Reset App - Will erase all stored model and reset settings")
+                        Text("Will erase all stored model and reset settings")
                     }
                 }
                 .overlay(alignment: .bottom) { // Save and cancel buttons
@@ -95,8 +103,8 @@ struct SettingsView: View {
                         .buttonStyle(SmallAccentButtonStyle())
                     }
                     .padding([.leading, .trailing], 20)
-                    .opacity(originalDeveloperMode == developerModeToggle && originalColourScheme == colourSchemeSelection ? 0.5 : 1)
-                    .disabled(originalDeveloperMode == developerModeToggle && originalColourScheme == colourSchemeSelection)
+                    .opacity(settingsHasChanges() ? 0.5 : 1)
+                    .disabled(settingsHasChanges())
                 }
                 .task {
                     fetchSettings()
@@ -114,21 +122,33 @@ struct SettingsView: View {
             colourSchemeSelection = ColourScheme(rawValue: colourSchemeString) ?? .defaultScheme
             originalColourScheme = colourSchemeSelection
         }
+        
+        searchModeToggle = UserDefaults.standard.bool(forKey: "searchModeToggle") ? true : false
+        originalSearchMode = searchModeToggle
     }
     
     /// Save the current settings to the app sotrage with the specified values
-    fileprivate func saveSettings(_ developerMode: Bool, _ colourScheme: String) {
+    fileprivate func saveSettings(_ developerMode: Bool, _ colourScheme: String, _ searchMode: Bool) {
         UserDefaults.standard.setValue(developerMode, forKey: "developerModeToggle")
         originalDeveloperMode = developerMode
         developerModeToggle = developerMode
         UserDefaults.standard.setValue(colourScheme, forKey: "colourScheme")
         originalColourScheme = ColourScheme(rawValue: colourScheme) ?? .defaultScheme
         colourSchemeSelection = ColourScheme(rawValue: colourScheme) ?? .defaultScheme
+        UserDefaults.standard.setValue(searchMode, forKey: "searchModeToggle")
+        originalSearchMode = searchMode
+        searchModeToggle = searchMode
+        
     }
     
     /// Convenience wrapper, saves settings with the current values
     fileprivate func saveSettings() {
-        saveSettings(developerModeToggle, colourSchemeSelection.rawValue)
+        saveSettings(developerModeToggle, colourSchemeSelection.rawValue, searchModeToggle)
+    }
+    
+    /// Checks if the user has made any alterations to the settings
+    fileprivate func settingsHasChanges() -> Bool {
+        return originalDeveloperMode == developerModeToggle && originalColourScheme == colourSchemeSelection && searchModeToggle == originalSearchMode
     }
 }
 

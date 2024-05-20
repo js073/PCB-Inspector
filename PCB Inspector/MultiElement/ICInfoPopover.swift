@@ -9,7 +9,7 @@
 import SwiftUI
 
 // Used for testing purposes
-var tempComponent: ICInfo = ICInfo(baseInfo: ComponentInfo(type: .ic, imageInfo: ComponentImageInfo(subImage: UIImage(named: "C1"), imageLocation: (0, 0), imageSize: (10, 10)), internalName: "IC1"), informationDescription: ["Manufacturer": "Broadcom", "Most Likely Code": "BCM2837B01FSBG", "informationSource": "https://www.apple.com", "DS": "http://datasheet.octopart.com/PIC18F44J10-I/PT-Microchip-datasheet-8383908.pdf"], infoState: .notAvaliable, note: "tmp", informationURL: "https://www.apple.com")
+var tempComponent: ICInfo = ICInfo(baseInfo: ComponentInfo(type: .ic, imageInfo: ComponentImageInfo(subImage: UIImage(named: "ScaleTest"), imageLocation: (0, 0), imageSize: (10, 10)), internalName: "IC1"), informationDescription: ["Manufacturer": "Broadcom", "Most Likely Code": "BCM2837B01FSBG", "informationSource": "https://www.apple.com", "DS": "http://datasheet.octopart.com/PIC18F44J10-I/PT-Microchip-datasheet-8383908.pdf"], infoState: .notAvaliable, note: "tmp", informationURL: "https://www.apple.com")
 
 struct ICInfoPopover: View {
     @State var component: ICInfo? // Info component
@@ -19,6 +19,7 @@ struct ICInfoPopover: View {
     @State fileprivate var showingImagePreview: Bool = false
     @State fileprivate var showingDeleteConfirmation: Bool = false
     @State fileprivate var showingImageRetakeOption: Bool = false
+    fileprivate let isUsingAPI = UserDefaults.standard.bool(forKey: "searchModeToggle")
     
     var body: some View {
         GeometryReader { geometry in
@@ -133,31 +134,33 @@ struct ICInfoPopover: View {
                         Spacer()
                         
                     case .notAvaliable: // No inforation avaliable through API
-                        Image(systemName: "questionmark.app.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundStyle(.orange)
-                            .frame(maxHeight: geometry.size.height * 0.05)
-                        Spacer()
-                            .frame(height: 25)
-                        Text("No information could be found about this component")
-                            .font(.title3)
-                            .bold()
-                            .padding([.leading, .trailing], 20)
-                        
-                        Button { // Button the allow the user to search the web instead
-                            controller.setComponentURL(component.baseInfo.id, nil)
-                            self.component = controller.getICByID(component.baseInfo.id)
-                        } label: {
-                            HStack {
-                                Text("Search with Google")
-                                    .bold()
-                                    .font(.title3)
-                                Image("Google Logo")
-                                    .font(.title3)
+                        if isUsingAPI { // Show Google Search option only if the API is being used 
+                            Image(systemName: "questionmark.app.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundStyle(.orange)
+                                .frame(maxHeight: geometry.size.height * 0.05)
+                            Spacer()
+                                .frame(height: 25)
+                            Text("No information could be found about this component")
+                                .font(.title3)
+                                .bold()
+                                .padding([.leading, .trailing], 20)
+                            
+                            Button { // Button the allow the user to search the web instead
+                                controller.setComponentURL(component.baseInfo.id, nil)
+                                self.component = controller.getICByID(component.baseInfo.id)
+                            } label: {
+                                HStack {
+                                    Text("Search with Google")
+                                        .bold()
+                                        .font(.title3)
+                                    Image("Google Logo")
+                                        .font(.title3)
+                                }
                             }
+                            .buttonStyle(AccentButtonStyle())
                         }
-                        .buttonStyle(AccentButtonStyle())
                         
                         List { // List of the raw identified information
                             Section {
