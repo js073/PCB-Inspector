@@ -45,15 +45,15 @@ struct SettingsView: View {
                             })
                             
                             // Google API options
-                            Button {
-                                showingGoogleSheet.toggle()
-                            } label: {
-                                LabeledContent("Google API Credentials", content: { Image(systemName: "chevron.right") })
-                            }
-                            .foregroundStyle(.iconColour)
-                            .sheet(isPresented: $showingGoogleSheet, content: {
-                                GoogleAPIScreen(closingAction: { showingGoogleSheet.toggle() })
-                            })
+//                            Button {
+//                                showingGoogleSheet.toggle()
+//                            } label: {
+//                                LabeledContent("Google API Credentials", content: { Image(systemName: "chevron.right") })
+//                            }
+//                            .foregroundStyle(.iconColour)
+//                            .sheet(isPresented: $showingGoogleSheet, content: {
+//                                GoogleAPIScreen(closingAction: { showingGoogleSheet.toggle() })
+//                            })
                         }
                         .disabled(!searchModeToggle)
                         .opacity(!searchModeToggle ? 0.5 : 1)

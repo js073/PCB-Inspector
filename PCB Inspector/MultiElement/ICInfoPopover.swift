@@ -134,33 +134,52 @@ struct ICInfoPopover: View {
                         Spacer()
                         
                     case .notAvaliable: // No inforation avaliable through API
-                        if isUsingAPI { // Show Google Search option only if the API is being used 
-                            Image(systemName: "questionmark.app.fill")
-                                .resizable()
-                                .scaledToFit()
-                                .foregroundStyle(.orange)
-                                .frame(maxHeight: geometry.size.height * 0.05)
-                            Spacer()
-                                .frame(height: 25)
-                            Text("No information could be found about this component")
-                                .font(.title3)
-                                .bold()
-                                .padding([.leading, .trailing], 20)
-                            
-                            Button { // Button the allow the user to search the web instead
-                                controller.setComponentURL(component.baseInfo.id, nil)
-                                self.component = controller.getICByID(component.baseInfo.id)
-                            } label: {
-                                HStack {
-                                    Text("Search with Google")
-                                        .bold()
-                                        .font(.title3)
-                                    Image("Google Logo")
-                                        .font(.title3)
+//                        if isUsingAPI { // Show Google Search option only if the API is being used 
+//                            Image(systemName: "questionmark.app.fill")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .foregroundStyle(.orange)
+//                                .frame(maxHeight: geometry.size.height * 0.05)
+//                            Spacer()
+//                                .frame(height: 25)
+//                            Text("No information could be found about this component")
+//                                .font(.title3)
+//                                .bold()
+//                                .padding([.leading, .trailing], 20)
+//                            
+//                            Button { // Button the allow the user to search the web instead
+//                                controller.setComponentURL(component.baseInfo.id, nil)
+//                                self.component = controller.getICByID(component.baseInfo.id)
+//                            } label: {
+//                                HStack {
+//                                    Text("Search with Google")
+//                                        .bold()
+//                                        .font(.title3)
+//                                    Image("Google Logo")
+//                                        .font(.title3)
+//                                }
+//                            }
+//                            .buttonStyle(AccentButtonStyle())
+//                        }
+                        
+                        Button { // Button to start a Google search about the component
+                            let searchText = "\(component.informationDescription["Manufacturer"] ?? "") \(component.informationDescription["Most Likely Code"] ?? "")"
+                            if let encoded = searchText.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed), let url = URL(string: "https://www.google.com/search?q=\(encoded)") {
+                                if #available(iOS 10.0, *) {
+                                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                                } else {
+                                    UIApplication.shared.openURL(url)
                                 }
                             }
-                            .buttonStyle(AccentButtonStyle())
+                        } label: {
+                            HStack {
+                                Image("globe")
+                                Text("Search the Web")
+                                    .bold()
+                            }
                         }
+                        .buttonStyle(AccentButtonStyle())
+                        .disabled(component.informationDescription["Most Likely Code"] == nil)
                         
                         List { // List of the raw identified information
                             Section {
